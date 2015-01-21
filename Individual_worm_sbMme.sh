@@ -6,3 +6,5 @@ for zipfolder in *; do java -Xmx8g -jar /Users/michelleroux/Documents/Tiffany/MW
 grep -r '[0-9]' $(find . -name '*.dat') > merged.file
 
 ##above doesn't work for large filesets... give the following error: -bash: /usr/bin/grep: Argument list too long 
+##if you have a large fileset, replace line 6 with the loop below:
+##for filename in $(find . -name '*.dat'); do grep -r '[0-9]' $filename >> merged.file; done
