@@ -3,6 +3,6 @@ for zipfolder in *; do java -Xmx8g -jar /Users/michelleroux/Documents/Tiffany/MW
 
 ##merge all files into one file containing all data
 ##find . -name '*.dat' -print0 | xargs -0 -I file cat file > merged.file
-grep '[*]' $(find . -name '*.dat') > merged.file
+grep -r '[0-9]' $(find . -name '*.dat') > merged.file
 
 ##above doesn't work for large filesets... give the following error: -bash: /usr/bin/grep: Argument list too long 
