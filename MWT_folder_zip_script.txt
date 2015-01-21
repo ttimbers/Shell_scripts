@@ -1,0 +1,3 @@
+#type "cd" and drag folder containing MWT folders you want to compress into terminal
+#use "pwd to verify you are in correct folder
+for foldername in *; do cd $foldername; zip ../$foldername *; cd ..; done
